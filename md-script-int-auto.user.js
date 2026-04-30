@@ -4,8 +4,8 @@
 // @version      1.1
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
-// @updateURL    https://raw.githubusercontent.com/WevessonMadson/usersscripts/main/md-script-int-auto.user.js
-// @downloadURL  https://raw.githubusercontent.com/WevessonMadson/usersscripts/main/md-script-int-auto.user.js
+// @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
+// @downloadURL  https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
 // ==/UserScript==
 
 (function() {
