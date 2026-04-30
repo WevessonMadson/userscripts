@@ -1,5 +1,5 @@
 # usersscripts
-scripts de usuarios para tampermonky
+scripts de usuarios para tampermonkey
 
 Interações automáticas
 https://github.com/WevessonMadson/userscripts/raw/refs/heads/main/md-script-int-auto.user.js
