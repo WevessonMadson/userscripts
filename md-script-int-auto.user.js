@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.0
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -25,6 +25,7 @@
         if (e.altKey && (e.key === 'i' || e.key === 'I')) {
             e.preventDefault();
             e.stopPropagation();
+            console.log("versao 1.0");
             main();
         }
     });
