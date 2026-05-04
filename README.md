@@ -15,3 +15,6 @@ https://github.com/WevessonMadson/userscripts/raw/refs/heads/main/md-move-matriz
 
 Não avaliados
 https://github.com/WevessonMadson/userscripts/raw/refs/heads/main/md-nao-avaliados.user.js
+
+Deixar o chat full screen
+https://github.com/WevessonMadson/userscripts/raw/refs/heads/main/md-fullscreen.user.js
