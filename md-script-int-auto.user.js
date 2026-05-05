@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -121,9 +121,10 @@ As avaliações são classificadas da seguinte forma:
 
     function transferirAtendimento() {
         const setores = ["ADM", "FISCAL", "PDV", "SERVIÇOS", "TRIBUTAÇÃO MATRIZ", "Consistência"];
+        const contato = prompt("INFORMA O CONTATO DO CLIENTE.\nExemplo: Nome - telefone");
         const setor = Number(prompt("SELECIONE O SETOR:\n1- ADM\n2- FISCAL\n3- PDV\n4- SERVIÇOS\n5- TRIBUTAÇÃO MATRIZ\n6- Consistência")) - 1;
 
-        if (setores[setor]) escreveMensagem(`@${setores[setor]}:\n\nContato:`);
+        if (setores[setor]) escreveMensagem(`@${setores[setor]}:\n\nContato: ${contato && contato.length > 8 ? contato : ''} `);
     }
 
     function acessoISL() {
