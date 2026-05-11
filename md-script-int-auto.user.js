@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.3
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -146,7 +146,7 @@ As avaliações são classificadas da seguinte forma:
             "5": "computador"
         }
 
-        escreveMensagem(`ISL: ${isl}\n\ncoloca este código ISL no ${mensagens[computador]}\n\n${linkIsl}`);
+        escreveMensagem(`ISL: ${isl}\n\ncoloca este código ISL no <strong>${mensagens[computador]}</strong>\n\n${linkIsl}`);
     }
 
     function pdvMenu(){
