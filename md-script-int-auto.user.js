@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.0.4
+// @version      1.0.5
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -75,10 +75,10 @@
         const hora = horaAtual();
 
         const saudacao = hora < 12
-            ? "Bom dia!"
-            : hora < 18
-                ? "Boa tarde!"
-                : "Boa noite!";
+        ? "Bom dia!"
+        : hora < 18
+        ? "Boa tarde!"
+        : "Boa noite!";
 
         switch(resposta) {
             case "1":
@@ -98,12 +98,12 @@
         const diaSemana = diaSemanaAtual();
 
         const periodo = hora < 12
-            ? "um dia abençoado."
-            : `uma ${hora < 18 ? "tarde" : "noite"} abençoada.`;
+        ? "um dia abençoado."
+        : `uma ${hora < 18 ? "tarde" : "noite"} abençoada.`;
 
         const tipoSemana = (diaSemana >= 1 && diaSemana <= 3)
-            ? "uma semana abençoada"
-            : "um final de semana abençoado.";
+        ? "uma semana abençoada"
+        : "um final de semana abençoado.";
 
         const mensagem_avaliacao = `
 <strong>Você poderia, por gentileza, realizar a avaliação do meu atendimento assim que ele for concluído? Sua opinião é muito importante para o nosso processo de melhoria contínua.</strong>
@@ -146,7 +146,11 @@ As avaliações são classificadas da seguinte forma:
             "5": "computador"
         }
 
-        escreveMensagem(`<strong>ISL: ${isl}</strong>\ncoloca este código ISL no <strong>${mensagens[computador]}</strong>\n\n${linkIsl}`);
+        if(isl.includes(",")) {
+            escreveMensagem(`<strong>ISLs:\n ${isl.replaceAll(",", "\n")}</strong>\ncoloca estes códigos ISLs nos <strong>${mensagens[computador]}</strong>\n${linkIsl}`);
+        } else {
+            escreveMensagem(`<strong>ISL: ${isl}</strong>\ncoloca este código ISL no <strong>${mensagens[computador]}</strong>\n${linkIsl}`);
+        }
     }
 
     function pdvMenu(){
