@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.0.5
+// @version      1.0.6
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -124,7 +124,7 @@ As avaliações são classificadas da seguinte forma:
         const contato = prompt("INFORMA O CONTATO DO CLIENTE.\nExemplo: Nome - telefone").replace("\n", " - ");
         const setor = Number(prompt("SELECIONE O SETOR:\n1- ADM\n2- FISCAL\n3- PDV\n4- SERVIÇOS\n5- TRIBUTAÇÃO MATRIZ\n6- Consistência")) - 1;
 
-        if (setores[setor]) escreveMensagem(`@${setores[setor]}:\n\nContato: ${contato && contato.length > 8 ? contato : ''} `);
+        if (setores[setor]) escreveMensagem(`@<strong>${setores[setor]}</strong>:\n\nContato: ${contato && contato.length > 8 ? contato : ''} `);
     }
 
     function acessoISL() {
@@ -173,9 +173,9 @@ As avaliações são classificadas da seguinte forma:
         const respostaMenu = exibeMenu(servicosMenu);
 
         const mensagens = {
-            "1": "Pede para todos sairem dos VR Master, por favor.\nE, assim que sairem, me avisa, por favor",
-            "2": "Pronto, atualizou. Já podem usar os VR Master.",
-            "3": "agora, por favor, atualiza os pdvs com a função 138 na tela de CAIXA LIVRE ou CAIXA FECHADO ou FECHADO PARCIAL"
+            "1": "Pede para <strong>todos sairem dos VR Master</strong>, por favor.\nE, <strong>assim que sairem, me avisa</strong>, por favor",
+            "2": "Pronto, atualizou. <strong>Já podem usar os VR Master.</strong>",
+            "3": "agora, por favor, <strong>atualiza os pdvs</strong> com a <strong>função 138</strong> na tela de <strong>CAIXA LIVRE</strong> ou <strong>CAIXA FECHADO</strong> ou <strong>FECHADO PARCIAL</strong>"
         }
 
         if (mensagens[respostaMenu]) escreveMensagem(mensagens[respostaMenu]);
