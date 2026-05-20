@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.0.6
+// @version      1.1.0
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -16,7 +16,7 @@
     // =========================
     const menuPrincipal = "1- Inicio conversa\n2- Fim conversa\n3- Transferir\n4- Acesso ISL\n5- MENU Célula";
     const menuCelulas = "1- PDV\n2- ADM\n3- FISCAL\n4- CONSISTÊNCIA\n5- SERVIÇOS";
-    const servicosMenu = "1- sair dos VRMaster\n2- podem usar os VR Master\n3- Atualizar PDVs";
+    const servicosMenu = "1- sair dos VRMaster\n2- podem usar os VR Master\n3- Atualizar PDVs\n4- Não atualizar os PDVs";
 
     // =========================
     // 🚀 INIT / EVENTOS
@@ -175,7 +175,8 @@ As avaliações são classificadas da seguinte forma:
         const mensagens = {
             "1": "Pede para <strong>todos sairem dos VR Master</strong>, por favor.\nE, <strong>assim que sairem, me avisa</strong>, por favor",
             "2": "Pronto, atualizou. <strong>Já podem usar os VR Master.</strong>",
-            "3": "agora, por favor, <strong>atualiza os pdvs</strong> com a <strong>função 138</strong> na tela de <strong>CAIXA LIVRE</strong> ou <strong>CAIXA FECHADO</strong> ou <strong>FECHADO PARCIAL</strong>"
+            "3": "agora, por favor, <strong>atualiza os pdvs</strong> com a <strong>função 138</strong> na tela de <strong>CAIXA LIVRE</strong> ou <strong>CAIXA FECHADO</strong> ou <strong>FECHADO PARCIAL</strong>",
+            "4": "Obs.:<strong>NÃO PRECISA</strong> atualizar os pdvs.",
         }
 
         if (mensagens[respostaMenu]) escreveMensagem(mensagens[respostaMenu]);
