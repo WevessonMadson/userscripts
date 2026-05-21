@@ -136,7 +136,7 @@ só clicar ou copiar link colocando no seu navegador, que vai direcionar diretam
             chatInput.focus();
             chatInput.click();
 
-            let htmlContent = textoFinal.replaceAll(/\n, '<br>');
+            let htmlContent = textoFinal.replaceAll('\n', '<br>');
 
             htmlContent = htmlContent.replace(
                 /(https?:\/\/[^\s<]+)/g,
