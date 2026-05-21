@@ -62,9 +62,7 @@ só clicar ou copiar link colocando no seu navegador, que vai direcionar diretam
     const MENSAGEM_RODAPE = `
 0 a 7: Insatisfeito com o atendimento ❌
 
-8 a 10: Satisfeito com o atendimento ✅
-
- `;
+8 a 10: Satisfeito com o atendimento ✅\n`;
 
     let idsCopiados = new Set();
     let pintorAtivo = null;
@@ -138,7 +136,7 @@ só clicar ou copiar link colocando no seu navegador, que vai direcionar diretam
             chatInput.focus();
             chatInput.click();
 
-            let htmlContent = textoFinal.replace(/\n/g, '<br>');
+            let htmlContent = textoFinal.replaceAll(/\n, '<br>');
 
             htmlContent = htmlContent.replace(
                 /(https?:\/\/[^\s<]+)/g,
