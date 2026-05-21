@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - Não Avaliados
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.0.0
 // @description  Ferramenta de produtividade compartilhada para Movidesk.
 // @author       Luiz (GustavinhoVr - Desenvolvimento proprio)
 // @copyright    2026, Luiz André - Distribuído sob Licença MIT.
@@ -59,7 +59,10 @@ só clicar ou copiar link colocando no seu navegador, que vai direcionar diretam
 `;
 
     // --- TEXTO PADRÃO: RODAPÉ ---
-    const MENSAGEM_RODAPE = "\n0 a 7: Insatisfeito com o atendimento ❌\n\n8 a 10: Satisfeito com o atendimento ✅\n ";
+    const MENSAGEM_RODAPE = `
+    0 a 7: Insatisfeito com o atendimento ❌
+    
+    8 a 10: Satisfeito com o atendimento ✅`;
 
     let idsCopiados = new Set();
     let pintorAtivo = null;
