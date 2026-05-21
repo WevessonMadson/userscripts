@@ -62,7 +62,9 @@ só clicar ou copiar link colocando no seu navegador, que vai direcionar diretam
     const MENSAGEM_RODAPE = `
 0 a 7: Insatisfeito com o atendimento ❌
 
-8 a 10: Satisfeito com o atendimento ✅\n`;
+8 a 10: Satisfeito com o atendimento ✅
+
+ `;
 
     let idsCopiados = new Set();
     let pintorAtivo = null;
