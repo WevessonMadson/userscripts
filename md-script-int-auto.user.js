@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.2.1
+// @version      1.2.2
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -139,11 +139,11 @@ As avaliações são classificadas da seguinte forma:
         let linkIsl = "Se não tiver o ISL, pode baixar o ISL através do link: <a hfref='https://account.islonline.net/start/ISLLightClient' target='_blank'>https://account.islonline.net/start/ISLLightClient</a>";
 
         const mensagens = {
-            "1": "servidor de aplicações (onde fica o concentrador)",
-            "2": "servidor banco de dados",
-            "3": "service manager",
+            "1": "SERVIDOR DE APLICAÇÕES (onde fica o concentrador)",
+            "2": "SERVIDOR DE BANCO DE DADOS",
+            "3": "SERVICE MANAGER",
             "4": "PDV",
-            "5": "computador"
+            "5": "COMPUTADOR"
         }
 
         if(isl.includes(",")) {
