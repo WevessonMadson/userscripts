@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.2.2
+// @version      1.2.3
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -173,7 +173,7 @@ As avaliações são classificadas da seguinte forma:
         const respostaMenu = exibeMenu(servicosMenu); 
 
         const mensagens = {
-            "1": "Pede para <strong>todos sairem dos VR Master</strong>, por favor.\nE, <strong>assim que sairem, me avisa</strong>, por favor",
+            "1": "Pede para <strong>todos sairem dos VR Master</strong>\nE, <strong>assim que sairem, me avisa</strong>, por favor",
             "2": "Pronto, atualizou. <strong>Já podem usar os VR Master.</strong>",
             "3": "agora, por favor, <strong>atualiza os pdvs</strong> com a <strong>função 138</strong> na tela de <strong>CAIXA LIVRE</strong> ou <strong>CAIXA FECHADO</strong> ou <strong>FECHADO PARCIAL</strong>",
             "4": "Obs.: <strong>NÃO PRECISA</strong> atualizar os pdvs.",
