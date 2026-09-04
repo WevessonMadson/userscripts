@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Movidesk - interações automáticas
 // @namespace    http://tampermonkey.net/
-// @version      1.2.3
+// @version      1.2.4
 // @description  Ferramenta para automação de mensagens de atendimento.
 // @match        *://*.movidesk.com/*
 // @updateURL    https://raw.githubusercontent.com/WevessonMadson/userscripts/main/md-script-int-auto.user.js
@@ -178,6 +178,7 @@ As avaliações são classificadas da seguinte forma:
             "3": "agora, por favor, <strong>atualiza os pdvs</strong> com a <strong>função 138</strong> na tela de <strong>CAIXA LIVRE</strong> ou <strong>CAIXA FECHADO</strong> ou <strong>FECHADO PARCIAL</strong>",
             "4": "Obs.: <strong>NÃO PRECISA</strong> atualizar os pdvs.",
             "5": "Agora, pode configurar o <strong>IP</strong> e <strong>PORTA</strong> no <strong>VR MOBILE</strong>\nVai em <strong>configurações</strong> no app, e coloca:\nIP: <strong>{IP}</strong>\nPORTA: <strong>{PORTA}</strong>\ne clica no botão: <strong>TESTAR CONEXÃO</strong>",
+            "6": "Em <strong>até 20 minutos</strong> passará este PIX nos pdvs; <strong>normalmente</strong> é imediato, por isso <strong>já pode testar</strong>, por favor",
         }
 
         if (mensagens[respostaMenu]) {
